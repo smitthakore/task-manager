@@ -29,7 +29,7 @@ export function TaskForm({ onSubmit }: TaskFormProps) {
 
     try {
       // Make API call to save the task in the database
-      const response = await axios.post('http://localhost:3000/api/tasks', formData, {
+      const response = await axios.post('https://task-manager-smitthakore.vercel.app/api/tasks', formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`, // Assuming token is saved in localStorage
         },
