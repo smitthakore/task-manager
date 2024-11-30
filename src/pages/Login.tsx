@@ -17,7 +17,7 @@ export function Login() {
     setError('');
 
     try {
-      const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
+      const endpoint = isLogin ? 'https://task-manager-smitthakore.vercel.app/api/auth/login' : 'https://task-manager-smitthakore.vercel.app/api/auth/register';
       const { data } = await axios.post(endpoint, formData);
       
       localStorage.setItem('token', data.token);
