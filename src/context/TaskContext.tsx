@@ -20,7 +20,7 @@ export function TaskProvider({ children }: { children: React.ReactNode }) {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const response = await axios.get('http://localhost:3000/api/tasks', {
+      const response = await axios.get('https://task-manager-smitthakore.vercel.app/api/tasks', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
